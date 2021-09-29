@@ -1,0 +1,40 @@
+/* Body light theme variables */
+body[data-theme="light"] {
+    --c-bg-main: hsl(185, 41%, 84%);
+    --c-bg-calc: hsl(0, 0%, 100%);
+    --c-bg-input: hsl(189, 41%, 97%);
+    --c-bg-total: hsl(183, 100%, 15%);
+    --c-bg-percentage-btn: hsl(183, 100%, 15%);
+    --c-bg-reset-btn: hsl(172, 67%, 45%);
+    --c-text-primary: hsl(184, 14%, 56%);
+    --c-text-secondary: hsl(0, 0%, 100%);
+    --c-text-neutral: hsl(184, 14%, 56%);
+    --c-text-input: hsl(183, 100%, 15%);
+    --c-text-result: hsl(172, 67%, 45%);
+    --c-focus-input: hsl(172, 67%, 45%);
+    --c-hover-bg-btn: hsl(185, 84%, 74%);
+    --c-hover-text: hsl(183, 100%, 15%);
+    --c-bg-active-btn: hsl(172, 67%, 45%);
+    --c-text-active-btn: hsl(183, 100%, 15%);
+}
+
+
+/* Body dark theme variables */
+body[data-theme="dark"] {
+    --c-bg-main: hsl(181, 90%, 16%);
+    --c-bg-calc: hsl(172, 67%, 45%);
+    --c-bg-input: hsl(185, 41%, 84%);
+    --c-bg-total: hsl(197, 87%, 12%);
+    --c-bg-percentage-btn: hsl(197, 87%, 12%);
+    --c-bg-reset-btn: hsl(189, 41%, 90%);
+    --c-text-primary: hsl(197, 87%, 12%);
+    --c-text-secondary: hsl(185, 41%, 84%);
+    --c-text-neutral: hsl(184, 14%, 56%);
+    --c-text-input: hsl(197, 87%, 12%);
+    --c-text-result: hsl(189, 41%, 90%);
+    --c-focus-input: hsl(197, 87%, 12%);
+    --c-hover-bg-btn: hsl(192, 100%, 64%);
+    --c-hover-text: hsl(183, 100%, 15%);
+    --c-bg-active-btn: hsl(189, 41%, 90%);
+    --c-text-active-btn: hsl(197, 87%, 12%);
+}

@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+
+/* Typography */
+
+body {
+    font-family: "Space Mono", monospace;
+}
+
+label {
+    font-size: 1rem;
+    color: var(--c-text-primary);
+}
+
+input {
+    font-size: 1.5rem;
+    color: var(--c-text-input);
+}
+
+label,
+input {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2em;
+    color: var(--c-text-result);
+}
+
+h2 {
+    font-size: .9em;
+    color: var(--c-text-secondary);
+}
+
+.tip__amount-text p,
+.total__amount-text p {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--c-text-neutral);
+}
+
+
+/* Global styles */
+
+body {
+    background-color: var(--c-bg-main);
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0;
+    position: relative;
+}
+
+.logo {
+    opacity: 0;
+}
+
+svg {
+    cursor: pointer;
+}
+
+.toggle__theme-container {
+    position: absolute;
+    right: 5%;
+    top: 10%;
+    padding: 4px;
+    outline: 0;
+    border-bottom: 4px dotted #fff;
+}
+
+.toggle__theme-container:focus {
+    outline: 4px dotted #fff;
+    border: none;
+}
+
+.toggle__theme {
+    padding: 0;
+    margin: 0;
+    transform: rotate(320deg);
+}
+
+main {
+    background-color: var(--c-bg-calc);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: .5rem;
+    max-width: 425px;
+    box-shadow: 0px 32px 43px rgba(79 166 175 / 20%);
+    opacity: 0;
+}
+
+.calc__container {
+    padding: 1.2rem;
+}
+
+label {
+    padding-bottom: 5rem;
+}
+
+input,
+button {
+    width: 100%;
+    padding: .7rem 0;
+    border-radius: 5px;
+    border: none;
+    outline: 0;
+}
+
+input {
+    direction: rtl;
+    text-indent: .5em;
+    background-color: var(--c-bg-input);
+}
+
+input:focus {
+    box-shadow: 0 0 0 1pt var(--c-focus-input);
+}
+
+input::placeholder {
+    color: hsl(186, 20%, 61%);
+}
+
+#input--bill,
+#input--percentage,
+#input--num-of-people {
+    margin-bottom: 1.5rem;
+}
+
+#input--bill {
+    margin-top: .4rem;
+    background-image: url("../images/icon-dollar.svg");
+    background-position: 5%;
+    background-repeat: no-repeat;
+    background-size: 11px;
+}
+
+#input--percentage {
+    margin-top: .8rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+.percent__btn {
+    background-color: var(--c-bg-percentage-btn);
+    color: var(--c-text-secondary);
+    font-weight: 700;
+    font-size: 1.4em;
+}
+
+.percent__btn:hover,
+button:hover {
+    background-color: var(--c-hover-bg-btn);
+    color: var(--c-hover-text);
+    cursor: pointer;
+}
+
+.percent__btn:focus {
+    outline: 4px dotted hsl(181, 90%, 16%);
+    outline-offset: 1px;
+}
+
+#input--num-of-people {
+    margin-top: .4rem;
+    background-image: url("../images/icon-person.svg");
+    background-position: 5%;
+    background-repeat: no-repeat;
+    background-size: 12px;
+}
+
+.calc__total {
+    background-color: var(--c-bg-total);
+    border-radius: 15px;
+    padding: 1.5rem 1.6rem;
+}
+
+.tip__amount,
+.total__amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin-top: .2em;
+}
+
+.tip__amount-text h2,
+.total__amount-text h2 {
+    margin: 0;
+}
+
+.tip__amount-text p,
+.total__amount-text p {
+    margin: .2em;
+}
+
+.reset {
+    background-color: var(--c-bg-reset-btn);
+    color: var(--c-text-input);
+    font-weight: 700;
+}
+
+.reset:disabled {
+    opacity: .3;
+    cursor: not-allowed;
+}
+
+.reset:focus {
+    outline: 4px dotted hsl(185, 41%, 84%);
+    outline-offset: 1px;
+}
+
+/* Classes to be added using javascript */
+
+.error::after {
+    content: "Can't be zero";
+    color: crimson;
+    font-size: .9rem;
+    padding-left: 15%;
+}
+
+.error__border:focus {
+    box-shadow: 0 0 0 1pt crimson;
+}
+
+.active {
+    background-color: var(--c-bg-active-btn);
+    color: var(--c-text-active-btn);
+    pointer-events: none;
+}
+
+
+
+/* -----Media Queries----- */
+
+
+/* Screen widths 500px to 1024px */
+
+@media(min-width: 425px) {
+    main {
+        margin: 5% auto;
+        border-radius: 15px;
+    }
+
+    .error::after {
+        padding-left: 25%;
+    }
+
+}
+
+
+/* Screen widths 1024px */
+
+@media(min-width: 1024px) {
+
+    header {
+        padding: 5rem;
+    }
+
+    .toggle__theme-container {
+        right: 10%;
+    }
+
+    main {
+        max-width: 820px;
+        margin: 0 auto;
+    }
+
+    .calc__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #input--num-of-people {
+        margin-bottom: 0;
+    }
+
+    .calc__input {
+        width: 48%;
+    }
+
+    .calc__total {
+        width: 42%;
+    }
+
+    #input--percentage {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .reset {
+        font-size: 1.2rem;
+        margin-top: 30%;
+    }
+
+    .error::after {
+        padding-left: 23%;
+    }
+
+}
+
+
+/* Screen widths 1440px */
+
+@media(min-width: 1440px) {
+
+    .toggle__theme-container {
+        right: 22%;
+        top: 18%;
+    }
+
+    input {
+        font-size: 1.7rem;
+    }
+
+    #input--custom {
+        font-size: 1.5rem;
+    }
+
+    main {
+        width: 55%;
+        padding: .8rem;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .reset {
+        margin-top: 30%;
+    }
+
+}
